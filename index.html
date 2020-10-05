@@ -17,6 +17,11 @@
             height: 100vh;
             width: 100vw;
         }
+        img {
+            align-self: center;
+            max-height: 80vh;
+            max-width: 80vw;
+        }
         section {
             position: absolute;
             top: 0;
@@ -41,17 +46,37 @@
         }
         section div.visual {
             margin: 20px;
-            max-width: 450px;
+            /* max-width: 450px; */
             max-height: 60%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        img {
-            align-self: center;
-            max-height: 80vh;
-            max-width: 80vw;
+        section#exercises div#letter {
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 1px dashed black;
+        }
+        section#exercises div#letter h4 {
+            width: 100%;
+            margin-top: 0;
+        }
+        section#exercises div#letter div {
+            padding: 20px;
+            height: 600px;
+            width: 350px;
+            border: 1px dashed black;
+        }
+        section#exercises div#letter div#letter-protocol {
+            height: 400px;
+            margin-left: 20px;
+        }
+        ol {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -113,10 +138,13 @@
                 <p><small><em>Use the left and right arrow keys to navigate.</em></small></p>
             </div>
         </section>
-        <section id="intro-h--d">
-            <h2>Hackers & Designers</h2>
+        <section>
+           <div class="text">
+                <h2>Hackers & Designers</h2>
+                <p><small><em>Anja, could you do the general introduction of H&D and include a couple images here?</em></small></p>
+            </div>
         </section>
-        <section id="intro-mailart">
+        <section>
             <h2>Mail Art</h2>
         </section>
         <section>
@@ -142,16 +170,40 @@
         </section>
         <section>
             <div class="visual">
-                <h3>Temporary Riparian Zone (HDSA 2020)</h3>
+                <h3>Temporary Riparian Zone</h3>
                 <img src="src/trz-interface2.png" />
                 <p><small><em>Source: <a target="_blank" href="https://hackersanddesigners.nl/p/Temporary_Riparian_Zone">hackersanddesigners.nl</a></em></small></p>
             </div>
         </section>
-        <section id="intro-participants">
-            <h2>Etherpad</h2>
-        </section>
         <section id="exercises">
-            <h2>Exercises</h2>
+            <div class="visual">
+                <h2>Goal of today's workshop:</h2>
+                <div id="letter">
+                    <h4>Envelope</h4>
+                    <div id="letter-contents">
+                        <h4>Letter</h4>   
+                        <p>A complaint letter to the Internet.
+                       <br>What can the Internet not do?</p>
+                    </div>
+                    <div id="letter-protocol">
+                        <h4>Protocol</h4>   
+                        <ol>
+                            <li>A set of instructions</li>
+                            <li>that tell sender/reciever </li>
+                            <li>how to enact their role</li>
+                            <li>in the network.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <section id="intro-participants">
+            <div class="text">
+                <h2>Etherpad</h2>
+                <p>Here we could create an etherpad to show the workshop plan, let paritcipants introduce themselves, and potentially use for one or two of the exercises.</p>
+                <p>I propose that we do exercise (1) on paper individually and staple them all together; and we do exercise (2) on the etherpad because its more a collaborative writing/editing effort, and print it.</p>
+                <p>(Would it be an idea to bring a raspberry pi with us and run an offline instance of etherpad on it so that we are fully "off-grid"?)</p>
+            </div>
         </section>
     </main>
 </body>
